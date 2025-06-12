@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: application.name=hexagonal
+
+server:
+  port: 8081
+
+
+
+ribeiro:
+  client:
+    address:
+      url: http://localhost:8082/addresses
