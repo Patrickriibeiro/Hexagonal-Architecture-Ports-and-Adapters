@@ -1,9 +1,15 @@
 spring:
   application:
     name: application.name=hexagonal
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/hexagonal
+
 
 server:
   port: 8081
+
+
 
 
 
