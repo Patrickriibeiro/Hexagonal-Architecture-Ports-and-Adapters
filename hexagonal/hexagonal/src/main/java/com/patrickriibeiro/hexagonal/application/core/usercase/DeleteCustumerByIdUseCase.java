@@ -1,9 +1,10 @@
 package com.patrickriibeiro.hexagonal.application.core.usercase;
 
+import com.patrickriibeiro.hexagonal.application.ports.in.DeleteCustomerByIdInputPort;
 import com.patrickriibeiro.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import com.patrickriibeiro.hexagonal.application.ports.out.DeleteCustomerByIdOutPutPort;
 
-public class DeleteCustumerByIdUseCase {
+public class DeleteCustumerByIdUseCase implements DeleteCustomerByIdInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
