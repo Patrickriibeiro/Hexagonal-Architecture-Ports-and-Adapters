@@ -4,13 +4,13 @@ import com.patrickriibeiro.hexagonal.application.ports.in.DeleteCustomerByIdInpu
 import com.patrickriibeiro.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import com.patrickriibeiro.hexagonal.application.ports.out.DeleteCustomerByIdOutPutPort;
 
-public class DeleteCustumerByIdUseCase implements DeleteCustomerByIdInputPort {
+public class DeleteCustomerByIdUseCase implements DeleteCustomerByIdInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
     private final DeleteCustomerByIdOutPutPort deleteCustomerByIdOutPutPort;
 
-    public DeleteCustumerByIdUseCase(FindCustomerByIdInputPort findCustomerByIdInputPort, DeleteCustomerByIdOutPutPort deleteCustomerByIdOutPutPort) {
+    public DeleteCustomerByIdUseCase(FindCustomerByIdInputPort findCustomerByIdInputPort, DeleteCustomerByIdOutPutPort deleteCustomerByIdOutPutPort) {
         this.findCustomerByIdInputPort = findCustomerByIdInputPort;
         this.deleteCustomerByIdOutPutPort = deleteCustomerByIdOutPutPort;
     }
