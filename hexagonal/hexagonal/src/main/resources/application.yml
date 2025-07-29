@@ -5,13 +5,8 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017/hexagonal
 
-
 server:
   port: 8081
-
-
-
-
 
 ribeiro:
   client:
