@@ -12,12 +12,12 @@ public class Customer {
 
     private boolean validCpf;
 
-    public Customer(String id, String name, String cpf, Address address, Boolean isValidCpf) {
+    public Customer(String id, String name, String cpf, Address address, Boolean validCpf) {
         this.id = id;
         this.name = name;
         this.cpf = cpf;
         this.address = address;
-        this.isValidCpf = isValidCpf;
+        this.validCpf = validCpf;
     }
 
     public String getId() {
