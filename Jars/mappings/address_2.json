@@ -1,0 +1,17 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/addresses/38400001"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "street": "Rua das Flores",
+            "city": "São Paulo",
+            "state": "São Paulo"
+        }
+    }
+}
