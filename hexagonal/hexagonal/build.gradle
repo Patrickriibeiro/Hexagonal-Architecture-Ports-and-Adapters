@@ -24,7 +24,9 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', '2021.0.4')
+    // Align Spring Cloud with the Spring Boot 3.x baseline
+    // Using the latest Spring Cloud Release Train compatible with Boot 3.5
+    set('springCloudVersion', '2025.0.0')
 }
 
 dependencies {
