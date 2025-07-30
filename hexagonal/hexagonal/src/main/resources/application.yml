@@ -3,12 +3,17 @@ spring:
     name: application.name=hexagonal
   data:
     mongodb:
-      uri: mongodb://localhost:27017/hexagonal
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: hexagonal
 
 server:
   port: 8081
 
-ribeiro:
+oliveira:
   client:
     address:
       url: http://localhost:8082/addresses

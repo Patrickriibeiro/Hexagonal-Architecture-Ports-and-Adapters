@@ -10,11 +10,7 @@ public class Customer {
 
     private Address address;
 
-    private Boolean isValidCpf;
-
-    public Customer() {
-        this.isValidCpf = false;
-    }
+    private boolean validCpf;
 
     public Customer(String id, String name, String cpf, Address address, Boolean isValidCpf) {
         this.id = id;
@@ -56,11 +52,12 @@ public class Customer {
         this.address = address;
     }
 
-    public Boolean getValidCpf() {
-        return isValidCpf;
+    public boolean isValidCpf() {
+        return validCpf;
     }
 
-    public void setValidCpf(Boolean validCpf) {
-        isValidCpf = validCpf;
+    public void setValidCpf(boolean validCpf) {
+        this.validCpf = validCpf;
     }
+
 }
