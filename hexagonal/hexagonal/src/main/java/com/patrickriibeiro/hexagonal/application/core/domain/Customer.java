@@ -12,6 +12,9 @@ public class Customer {
 
     private boolean validCpf;
 
+    public Customer() {
+    }
+
     public Customer(String id, String name, String cpf, Address address, Boolean validCpf) {
         this.id = id;
         this.name = name;

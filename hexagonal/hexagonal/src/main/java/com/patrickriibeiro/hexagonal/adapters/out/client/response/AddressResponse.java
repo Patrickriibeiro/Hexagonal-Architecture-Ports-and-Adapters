@@ -9,6 +9,6 @@ public class AddressResponse {
 
     private String city;
 
-    private String estate;
+    private String state;
 
 }

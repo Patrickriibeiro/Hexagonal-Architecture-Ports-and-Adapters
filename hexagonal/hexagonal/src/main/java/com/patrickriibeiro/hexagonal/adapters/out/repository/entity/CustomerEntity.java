@@ -18,6 +18,6 @@ public class CustomerEntity {
 
     private AddressEntity address;
 
-    private Boolean isValidCpf;
+    private boolean validCpf;
 
 }

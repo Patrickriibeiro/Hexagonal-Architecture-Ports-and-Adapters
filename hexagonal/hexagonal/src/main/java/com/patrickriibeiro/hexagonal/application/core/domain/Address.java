@@ -6,12 +6,12 @@ public class Address {
 
     private String city;
 
-    private String estate;
+    private String state;
 
-    public Address(String street, String city, String estate) {
+    public Address(String street, String city, String state) {
         this.street = street;
         this.city = city;
-        this.estate = estate;
+        this.state = state;
     }
 
     public Address() {
@@ -25,12 +25,12 @@ public class Address {
         this.city = city;
     }
 
-    public String getEstate() {
-        return estate;
+    public String getState() {
+        return state;
     }
 
-    public void setEstate(String estate) {
-        this.estate = estate;
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getStreet() {
