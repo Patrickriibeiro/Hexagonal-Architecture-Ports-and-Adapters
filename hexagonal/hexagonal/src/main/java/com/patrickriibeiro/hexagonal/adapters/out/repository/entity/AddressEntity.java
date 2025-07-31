@@ -9,6 +9,6 @@ public class AddressEntity {
 
     private String city;
 
-    private String estate;
+    private String state;
 
 }
