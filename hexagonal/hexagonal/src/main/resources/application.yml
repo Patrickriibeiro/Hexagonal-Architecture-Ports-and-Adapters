@@ -1,6 +1,6 @@
 spring:
   application:
-    name: application.name=hexagonal
+    name: hexagonal
   data:
     mongodb:
       host: localhost
