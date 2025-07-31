@@ -11,6 +11,6 @@ public class CustomerResponse {
 
     private AddressResponse address;
 
-    private Boolean isValidCpf;
+    private boolean validCpf;
 
 }
