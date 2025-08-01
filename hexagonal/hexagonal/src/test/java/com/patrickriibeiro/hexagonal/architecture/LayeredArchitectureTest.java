@@ -23,7 +23,7 @@ public class LayeredArchitectureTest {
             .whereLayer("AdaptersIn").mayOnlyBeAccessedByLayers("Config")
             .whereLayer("AdaptersOut").mayOnlyBeAccessedByLayers("Config")
             .whereLayer("UserCase").mayOnlyBeAccessedByLayers("Config")
-            .whereLayer("PortsIn").mayOnlyBeAccessedByLayers("UserCase","AdaptersIn")
-            .whereLayer("PortsOut").mayOnlyBeAccessedByLayers("UserCase","AdaptersOut")
-            .whereLayer("Config").mayNotAccessAnyLayer();
+            .whereLayer("PortsIn").mayOnlyBeAccessedByLayers("UserCase","AdaptersIn","Config")
+            .whereLayer("PortsOut").mayOnlyBeAccessedByLayers("UserCase","AdaptersOut","Config")
+            .whereLayer("Config").mayOnlyBeAccessedByLayers("Config");
 }
