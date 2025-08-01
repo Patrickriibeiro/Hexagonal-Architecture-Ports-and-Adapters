@@ -3,12 +3,10 @@ package com.patrickriibeiro.hexagonal.architecture;
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 
 @AnalyzeClasses(packages = "com.patrickriibeiro.hexagonal")
-@SpringBootTest
 public class LayeredArchitectureTest {
 
     @ArchTest
