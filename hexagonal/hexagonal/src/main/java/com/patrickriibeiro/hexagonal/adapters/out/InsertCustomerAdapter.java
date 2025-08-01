@@ -1,7 +1,6 @@
 package com.patrickriibeiro.hexagonal.adapters.out;
 
 import com.patrickriibeiro.hexagonal.adapters.out.repository.CustomerRepository;
-import com.patrickriibeiro.hexagonal.adapters.out.repository.entity.CustomerEntity;
 import com.patrickriibeiro.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import com.patrickriibeiro.hexagonal.application.core.domain.Customer;
 import com.patrickriibeiro.hexagonal.application.ports.out.InsertCustomerOutputPort;
