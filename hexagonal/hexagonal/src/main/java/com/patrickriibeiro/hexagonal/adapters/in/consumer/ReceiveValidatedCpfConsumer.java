@@ -3,18 +3,17 @@ package com.patrickriibeiro.hexagonal.adapters.in.consumer;
 import com.patrickriibeiro.hexagonal.adapters.in.consumer.mapper.CustomerMessageMapper;
 import com.patrickriibeiro.hexagonal.adapters.in.consumer.message.CustomerMessage;
 import com.patrickriibeiro.hexagonal.application.ports.in.UpdateCustomerInputPort;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class ReceiveValidatedCpfConsumer {
 
-    @Autowired
-    private UpdateCustomerInputPort updateCustomerInputPort;
+    private final UpdateCustomerInputPort updateCustomerInputPort;
 
-    @Autowired
-    private CustomerMessageMapper customerMessageMapper;
+    private final CustomerMessageMapper customerMessageMapper;
 
     @KafkaListener(topics = "tp-cpf-validated", groupId = "oliveira")
     public void receive(CustomerMessage customerMessage){

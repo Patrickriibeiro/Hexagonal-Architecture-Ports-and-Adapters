@@ -4,21 +4,20 @@ import com.patrickriibeiro.hexagonal.adapters.out.repository.CustomerRepository;
 import com.patrickriibeiro.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import com.patrickriibeiro.hexagonal.application.core.domain.Customer;
 import com.patrickriibeiro.hexagonal.application.ports.out.UpdateCustomerOutputPort;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UpdateCustumerAdapter implements UpdateCustomerOutputPort {
+@RequiredArgsConstructor
+public class UpdateCustomerAdapter implements UpdateCustomerOutputPort {
 
-    @Autowired
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
-    @Autowired
-    private CustomerEntityMapper customerEntityMapper;
+    private final CustomerEntityMapper customerEntityMapper;
 
     @Override
     public void update(Customer customer) {
-        var custumerEntity = customerEntityMapper.toCustomerEntity(customer);
-        customerRepository.save(custumerEntity);
+        var customerEntity = customerEntityMapper.toCustomerEntity(customer);
+        customerRepository.save(customerEntity);
     }
 }

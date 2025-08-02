@@ -1,9 +1,9 @@
 package com.patrickriibeiro.hexagonal.config;
 
 import com.patrickriibeiro.hexagonal.adapters.out.FindAddressByZipCodeAdapter;
-import com.patrickriibeiro.hexagonal.adapters.out.UpdateCustumerAdapter;
-import com.patrickriibeiro.hexagonal.application.core.usercase.FindCustomerByIdUseCase;
-import com.patrickriibeiro.hexagonal.application.core.usercase.UpdateCustomerUserCase;
+import com.patrickriibeiro.hexagonal.adapters.out.UpdateCustomerAdapter;
+import com.patrickriibeiro.hexagonal.application.core.usecase.FindCustomerByIdUseCase;
+import com.patrickriibeiro.hexagonal.application.core.usecase.UpdateCustomerUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
 public class UpdateCustomerConfig {
 
     @Bean
-    public UpdateCustomerUserCase updateCustomerUserCase(FindCustomerByIdUseCase findCustomerByIdUseCase,
-                                                         FindAddressByZipCodeAdapter findAddressByZipCodeAdapter,
-                                                         UpdateCustumerAdapter updateCustumerAdapter) {
-        return new UpdateCustomerUserCase(findCustomerByIdUseCase, findAddressByZipCodeAdapter, updateCustumerAdapter);
+    public UpdateCustomerUseCase updateCustomerUseCase(FindCustomerByIdUseCase findCustomerByIdUseCase,
+                                                       FindAddressByZipCodeAdapter findAddressByZipCodeAdapter,
+                                                       UpdateCustomerAdapter updateCustomerAdapter) {
+        return new UpdateCustomerUseCase(findCustomerByIdUseCase, findAddressByZipCodeAdapter, updateCustomerAdapter);
     }
 }

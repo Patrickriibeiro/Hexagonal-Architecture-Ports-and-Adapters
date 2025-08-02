@@ -1,4 +1,4 @@
-package com.patrickriibeiro.hexagonal.application.core.usercase;
+package com.patrickriibeiro.hexagonal.application.core.usecase;
 
 import com.patrickriibeiro.hexagonal.application.core.domain.Customer;
 import com.patrickriibeiro.hexagonal.application.ports.in.InsertCustomerInputPort;

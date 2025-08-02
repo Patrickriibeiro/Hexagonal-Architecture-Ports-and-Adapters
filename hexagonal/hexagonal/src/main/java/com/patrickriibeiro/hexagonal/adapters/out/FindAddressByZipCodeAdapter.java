@@ -4,18 +4,16 @@ import com.patrickriibeiro.hexagonal.adapters.out.client.FindAddressByZipCodeCli
 import com.patrickriibeiro.hexagonal.adapters.out.client.mapper.AddressResponseMapper;
 import com.patrickriibeiro.hexagonal.application.core.domain.Address;
 import com.patrickriibeiro.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class FindAddressByZipCodeAdapter implements FindAddressByZipCodeOutputPort {
 
-    @Autowired
-    private FindAddressByZipCodeClient findAddressByZipCodeClient;
+    private final FindAddressByZipCodeClient findAddressByZipCodeClient;
 
-    @Autowired
-    private AddressResponseMapper addressResponseMapper;
-
+    private final AddressResponseMapper addressResponseMapper;
 
     @Override
     public Address find(String zipCode) {

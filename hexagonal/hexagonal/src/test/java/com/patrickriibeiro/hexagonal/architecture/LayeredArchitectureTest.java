@@ -14,14 +14,14 @@ public class LayeredArchitectureTest {
             .consideringAllDependencies()
             .layer("AdaptersIn").definedBy("..adapters.in..")
             .layer("AdaptersOut").definedBy("..adapters.out..")
-            .layer("UserCase").definedBy("..application.core.usercase..")
+            .layer("UseCase").definedBy("..application.core.usecase..")
             .layer("PortsIn").definedBy("..application.ports.in..")
             .layer("PortsOut").definedBy("..application.ports.out..")
             .layer("Config").definedBy("..config..")
             .whereLayer("AdaptersIn").mayOnlyBeAccessedByLayers("Config")
             .whereLayer("AdaptersOut").mayOnlyBeAccessedByLayers("Config")
-            .whereLayer("UserCase").mayOnlyBeAccessedByLayers("Config")
-            .whereLayer("PortsIn").mayOnlyBeAccessedByLayers("UserCase","AdaptersIn","Config")
-            .whereLayer("PortsOut").mayOnlyBeAccessedByLayers("UserCase","AdaptersOut","Config")
+            .whereLayer("UseCase").mayOnlyBeAccessedByLayers("Config")
+            .whereLayer("PortsIn").mayOnlyBeAccessedByLayers("UseCase","AdaptersIn","Config")
+            .whereLayer("PortsOut").mayOnlyBeAccessedByLayers("UseCase","AdaptersOut","Config")
             .whereLayer("Config").mayOnlyBeAccessedByLayers("Config");
 }
