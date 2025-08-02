@@ -4,7 +4,7 @@ import com.patrickriibeiro.hexagonal.application.core.domain.Customer;
 
 import java.util.Optional;
 
-public interface FindCustomerByIdOutPutPort {
+public interface FindCustomerByIdOutputPort {
 
     Optional<Customer> find(String id);
 

@@ -9,28 +9,24 @@ import com.patrickriibeiro.hexagonal.application.ports.in.FindCustomerByIdInputP
 import com.patrickriibeiro.hexagonal.application.ports.in.InsertCustomerInputPort;
 import com.patrickriibeiro.hexagonal.application.ports.in.UpdateCustomerInputPort;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/customers")
+@RequiredArgsConstructor
 public class CustomerController {
 
-    @Autowired
-    private InsertCustomerInputPort insertCustomerInputPort;
+    private final InsertCustomerInputPort insertCustomerInputPort;
 
-    @Autowired
-    private FindCustomerByIdInputPort findCustomerByIdInputPort;
+    private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
-    @Autowired
-    private UpdateCustomerInputPort updateCustomerInputPort;
+    private final UpdateCustomerInputPort updateCustomerInputPort;
 
-    @Autowired
-    private DeleteCustomerByIdInputPort deleteCustomerByIdInputPort;
+    private final DeleteCustomerByIdInputPort deleteCustomerByIdInputPort;
 
-    @Autowired
-    private CustomerMapper customerMapper;
+    private final CustomerMapper customerMapper;
 
     @PostMapping
     public ResponseEntity<Void> insert(@Valid @RequestBody CustomerRequest customerRequest) {

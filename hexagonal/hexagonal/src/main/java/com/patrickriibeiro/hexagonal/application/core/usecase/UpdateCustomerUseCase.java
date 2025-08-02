@@ -1,4 +1,4 @@
-package com.patrickriibeiro.hexagonal.application.core.usercase;
+package com.patrickriibeiro.hexagonal.application.core.usecase;
 
 import com.patrickriibeiro.hexagonal.application.core.domain.Customer;
 import com.patrickriibeiro.hexagonal.application.ports.in.FindCustomerByIdInputPort;
@@ -6,7 +6,7 @@ import com.patrickriibeiro.hexagonal.application.ports.in.UpdateCustomerInputPor
 import com.patrickriibeiro.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.patrickriibeiro.hexagonal.application.ports.out.UpdateCustomerOutputPort;
 
-public class UpdateCustomerUserCase implements UpdateCustomerInputPort {
+public class UpdateCustomerUseCase implements UpdateCustomerInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
@@ -14,7 +14,7 @@ public class UpdateCustomerUserCase implements UpdateCustomerInputPort {
 
     private final UpdateCustomerOutputPort updateCustomerOutputPort;
 
-    public UpdateCustomerUserCase(FindCustomerByIdInputPort findCustomerByIdInputPort, FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort, UpdateCustomerOutputPort updateCustomerOutputPort) {
+    public UpdateCustomerUseCase(FindCustomerByIdInputPort findCustomerByIdInputPort, FindAddressByZipCodeOutputPort findAddressByZipCodeOutputPort, UpdateCustomerOutputPort updateCustomerOutputPort) {
         this.findCustomerByIdInputPort = findCustomerByIdInputPort;
         this.findAddressByZipCodeOutputPort = findAddressByZipCodeOutputPort;
         this.updateCustomerOutputPort = updateCustomerOutputPort;

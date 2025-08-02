@@ -1,15 +1,15 @@
 package com.patrickriibeiro.hexagonal.adapters.out;
 
 import com.patrickriibeiro.hexagonal.adapters.out.repository.CustomerRepository;
-import com.patrickriibeiro.hexagonal.application.ports.out.DeleteCustomerByIdOutPutPort;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.patrickriibeiro.hexagonal.application.ports.out.DeleteCustomerByIdOutputPort;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DeleteCustomerByIdAdapter implements DeleteCustomerByIdOutPutPort {
+@RequiredArgsConstructor
+public class DeleteCustomerByIdAdapter implements DeleteCustomerByIdOutputPort {
 
-    @Autowired
-    private CustomerRepository customerRepository;
+    private final CustomerRepository customerRepository;
 
     @Override
     public void delete(String id) {

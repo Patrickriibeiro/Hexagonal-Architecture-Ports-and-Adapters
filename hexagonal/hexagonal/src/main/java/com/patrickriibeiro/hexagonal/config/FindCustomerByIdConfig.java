@@ -1,7 +1,7 @@
 package com.patrickriibeiro.hexagonal.config;
 
 import com.patrickriibeiro.hexagonal.adapters.out.FindCustomerByIdAdapter;
-import com.patrickriibeiro.hexagonal.application.core.usercase.FindCustomerByIdUseCase;
+import com.patrickriibeiro.hexagonal.application.core.usecase.FindCustomerByIdUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

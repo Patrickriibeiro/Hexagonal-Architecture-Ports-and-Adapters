@@ -1,6 +1,6 @@
 package com.patrickriibeiro.hexagonal.application.ports.out;
 
-public interface DeleteCustomerByIdOutPutPort {
+public interface DeleteCustomerByIdOutputPort {
 
     void delete(String id);
 
